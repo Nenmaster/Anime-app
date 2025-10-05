@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		374474512E931766000127F7 /* SercretKey.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 374474502E931766000127F7 /* SercretKey.xcconfig */; };
+		374474552E931BF7000127F7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 374474542E931BF7000127F7 /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		37C46FC12E5D0BA200B24A51 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		374474502E931766000127F7 /* SercretKey.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SercretKey.xcconfig; sourceTree = "<group>"; };
+		374474522E9318D6000127F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		374474542E931BF7000127F7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		37C46FB32E5D0BA000B24A51 /* AnimeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C46FC02E5D0BA200B24A51 /* AnimeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C46FCA2E5D0BA200B24A51 /* AnimeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +83,9 @@
 		37C46FAA2E5D0BA000B24A51 = {
 			isa = PBXGroup;
 			children = (
+				374474542E931BF7000127F7 /* .gitignore */,
+				374474522E9318D6000127F7 /* Info.plist */,
+				374474502E931766000127F7 /* SercretKey.xcconfig */,
 				37C46FB52E5D0BA000B24A51 /* AnimeApp */,
 				37C46FC32E5D0BA200B24A51 /* AnimeAppTests */,
 				37C46FCD2E5D0BA200B24A51 /* AnimeAppUITests */,
@@ -212,6 +223,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				374474552E931BF7000127F7 /* .gitignore in Resources */,
+				374474512E931766000127F7 /* SercretKey.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +284,7 @@
 /* Begin XCBuildConfiguration section */
 		37C46FD22E5D0BA200B24A51 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 374474502E931766000127F7 /* SercretKey.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -334,6 +348,7 @@
 		};
 		37C46FD32E5D0BA200B24A51 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 374474502E931766000127F7 /* SercretKey.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -390,6 +405,7 @@
 		};
 		37C46FD52E5D0BA200B24A51 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 374474502E931766000127F7 /* SercretKey.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -418,6 +434,7 @@
 		};
 		37C46FD62E5D0BA200B24A51 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 374474502E931766000127F7 /* SercretKey.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -446,6 +463,7 @@
 		};
 		37C46FD82E5D0BA200B24A51 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 374474502E931766000127F7 /* SercretKey.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -464,6 +482,7 @@
 		};
 		37C46FD92E5D0BA200B24A51 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 374474502E931766000127F7 /* SercretKey.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -482,6 +501,7 @@
 		};
 		37C46FDB2E5D0BA200B24A51 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 374474502E931766000127F7 /* SercretKey.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -498,6 +518,7 @@
 		};
 		37C46FDC2E5D0BA200B24A51 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 374474502E931766000127F7 /* SercretKey.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

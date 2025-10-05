@@ -1,0 +1,14 @@
+DerivedData/
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+.build/
+Packages/
+
+# Secrets
+SercretKey.xcconfig
+*.xcconfig
+
+.DS_Store
+
