@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct AIBuddyChatView: View {
-    @StateObject private var aiManager = AINetworkManager()
     @State private var question = ""
     @State private var isLoading = false
+    @State private var responseText = ""
 
     var body: some View {
         NavigationView {
             VStack {
                 ScrollView {
-                    if aiManager.responseText.isEmpty {
+                    if responseText.isEmpty {
                         VStack(spacing: 8) {
                             Text("Ask your Anime AI Buddy")
                                 .font(.title2)
@@ -30,7 +30,7 @@ struct AIBuddyChatView: View {
                         .frame(maxHeight: .infinity)
                     } else {
                         VStack(alignment: .leading, spacing: 12) {
-                            Text(aiManager.responseText)
+                            Text(responseText)
                                 .padding()
                                 .background(Color(.systemGray6))
                                 .cornerRadius(12)
@@ -49,7 +49,11 @@ struct AIBuddyChatView: View {
                         Task {
                             guard !question.trimmingCharacters(in: .whitespaces).isEmpty else { return }
                             isLoading = true
-                            await aiManager.askQuestion(question)
+                            do {
+                                responseText = try await AIIntegrationManager.shared.handleUserQuestion(question)
+                            } catch {
+                                responseText = "⚠️ Error: \(error.localizedDescription)"
+                            }
                             isLoading = false
                             question = ""
                         }

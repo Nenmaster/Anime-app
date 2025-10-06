@@ -70,7 +70,6 @@ class AINetworkManager: ObservableObject {
                     print("🧠 Raw JSON Response:\n\(jsonString)")
                 }
 
-        // Decode and clean up the model response
         let decoded = try JSONDecoder().decode(AIResponse.self, from: data)
         let result = decoded.choices.first?.message.content
             .trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) ?? ""

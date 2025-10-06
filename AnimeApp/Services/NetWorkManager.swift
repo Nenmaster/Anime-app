@@ -73,4 +73,19 @@ class NetWorkManager: ObservableObject {
         }
         
     }
+    
+    func fetchAnime(for title: String) async throws -> AnimeSingleResponse? {
+        let query = title.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        let searchURL = "https://api.jikan.moe/v4/anime?q=\(query)&limit=1"
+        
+        let searchResults = try await getListData(from: searchURL)
+        guard let firstResult = searchResults.first else {
+            print("⚠️ No anime found for: \(title)")
+            return nil
+        }
+
+        let fullURL = "https://api.jikan.moe/v4/anime/\(firstResult.mal_id)/full"
+        let detailedAnime = try await getSingleResponse(from: fullURL)
+        return detailedAnime
+    }
 }
