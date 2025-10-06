@@ -53,6 +53,9 @@ class AINetworkManager: ObservableObject {
 
         do {
             let (data, _) = try await URLSession.shared.data(for: request)
+            if let jsonString = String(data: data, encoding: .utf8) {
+                      print("🧠 Raw JSON Response:\n\(jsonString)")
+                  }
             let decoded = try JSONDecoder().decode(AIResponse.self, from: data)
             if let content = decoded.choices.first?.message.content {
                 responseText = content.trimmingCharacters(in: .whitespacesAndNewlines)
