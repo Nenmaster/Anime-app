@@ -51,6 +51,12 @@ struct AnimeSingleResponse: Decodable, Identifiable {
     let favorites: Int?
     let synopsis: String?
     let streaming: [StreamingServices]?
+    let genres: [AnimeGenre]?
+    let studios: [AnimeStudio]?
+    let aired: Aired?
+    let season: String?
+    let year: Int?
+
 }
 
 struct Pages: Decodable {
@@ -85,6 +91,30 @@ struct StreamingServices: Decodable {
     let url: String
 }
 
+struct AnimeGenre: Decodable {
+    let name: String
+}
+
+struct AnimeStudio: Decodable {
+    let name: String
+}
+
+struct Aired: Decodable {
+    let from: String?
+    let to: String?
+    let prop: AiredProp?
+}
+
+struct AiredProp: Decodable {
+    let from: AiredDate?
+    let to: AiredDate?
+}
+
+struct AiredDate: Decodable {
+    let day: Int?
+    let month: Int?
+    let year: Int?
+}
 
 struct MockResponse {
     static let responseList = AnimeListResponse(
@@ -121,7 +151,12 @@ struct MockResponse {
         synopsis: "Naruto: Shippuden continues the story of Naruto Uzumaki two and a half years after the original series, following him as he returns from training with Jiraiya to become the leader of the Hidden Leaf Village, the Hokage. The series focuses on his growth into a powerful ninja, his ongoing rivalry with Sasuke Uchiha, and his efforts to combat the nefarious Akatsuki organization, which seeks to control the world. The storyline culminates in the Fourth Shinobi World War, a massive conflict against Akatsuki's forces, as Naruto must unite the ninja world to save it from total destruction.",
         streaming: [StreamingServices(name: "Netflix", url: "https://www.netflix.com/"),
                     StreamingServices(name: "Hulu", url: "https://www.hulu.com/")
-                   ]
+                   ],
+        genres: [AnimeGenre(name: "Action"), AnimeGenre(name: "Adventure"), AnimeGenre(name: "Fantasy")],
+        studios: [AnimeStudio(name: "Studio Ghibli")],
+        aired: Aired(from: "2017", to: "2025", prop: AiredProp(from: AiredDate(day: 6, month: 4, year: 2024 ), to: AiredDate(day: 28, month: 9, year: 2024 ))),
+        season: "Spring",
+        year: 2025
     )
 }
 
